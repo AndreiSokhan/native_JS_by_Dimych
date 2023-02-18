@@ -10,7 +10,7 @@ type TechType = {
    id: number
    title: string
 }
-type StudentsType = {
+export type StudentType = {
    id: number
    name: string
    age: number
@@ -20,15 +20,15 @@ type StudentsType = {
 }
 
 
-const student: StudentsType = {
+export const student: StudentType = {
    id: 1,
    "name": "Dima",
    age: 31,
-   isActive: true,
+   isActive: false,
    adress: {
       streetTitle: "Surganova 2",
       city: {
-         title: "Misnk",
+         title: "Minsk",
          countryTitle: "Belarus"
       }
    },
