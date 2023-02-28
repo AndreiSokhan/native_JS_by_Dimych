@@ -58,7 +58,9 @@ test("get only uncompleted tasks", () => {
       {id: 3, title: 'Sugar', isDone: false},
       {id: 4, title: 'Solt', isDone: true},
    ]
-   const unCompletedTasks = tasks.filter(task => task.isDone === false);
+   const unCompletedTasks = tasks.filter(task => !task.isDone);
+   //или такая вариация записи (не юзабельна в продакшене)
+   // const unCompletedTasks = tasks.filter(task => task.isDone===false);
 
    expect(unCompletedTasks.length).toBe(2);
    expect(unCompletedTasks[0].id).toBe(1);
